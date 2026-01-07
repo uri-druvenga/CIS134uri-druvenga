@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!-- Notes for future me:
+  -- It links to a few .html files that do not exist:
+  --   aboutus.html and reviews.html
+  --   All of the individual product tiles link to about:blank
+  -- These files *would* exist, but currently I'm just designing index.html, contact.html and product.html
+  -- CSS is TBD, so these elements might move around a little if I did something wrong.
+  -- In what class do I learn backend stuff? All these exposed .html-s make me cringe >.<
+  -->
+<html>
+	<head>
+		<title>Imposter Inc.</title>
+		<meta charset="UTF-8">
+		<!-- Placeholder for CSS <link> -->
+	</head>
+	<body>
+		<header>
+			<h1 id="header-logo">Imposter Inc.</h1>
+			<nav>
+				<a href="aboutus.html">About Us</a>
+				<a href="product.html">Products</a>
+				<a href="contact.html">Contact Us</a>
+			</nav>
+
+			<div id="header-burger-button">
+				<img src="assets/burger.svg">
+			</div>
+		</header>
+
+		<div id="hero-background">
+			<!-- The #hero-background will have CSS `background-image` for the hero image -->
+			<h1 id="hero-company-name">Imposter Inc.</h1>
+			<h2 id="hero-company-desc">The highest quality Among Us plushies on the market!</h2>
+		</div>
+
+		<main>
+			<section class="page-tile tile-blue" id="tile-aboutus">
+				<h1 class="tile-heading">
+					<a href="aboutus.html">About Us</a>
+				</h1>
+				<div class="tile-content">
+					<p class="tile-description">Lorem ipsum</p>
+					<img src="assets/pink.jpg">
+				</div>
+			</section>
+
+			<section class="page-tile tile-red" id="tile-products">
+				<h1 class="tile-heading">
+					<a href="product.html">Products</a>
+				</h1>
+				<div class="tile-content">
+					<p class="tile-description">Lorem ipsum</p>
+					<img src="assets/blue.jpg">
+				</div>
+			</section>
+
+			<section class="page-tile tile-green" id="tile-reviews">
+				<h1 class="tile-heading">
+					<a href="reviews.html">Reviews</a>
+				</h1>
+				<div class="tile-review-content">
+					<article class="review review-inactive-left">
+						<p class="review-content">I love Among Us so much</p>
+						<div class="review-bottom">
+							<span class="review-stars">⭐⭐⭐⭐⭐</span>
+							<span class="review-name">"Among Us" lover</span>
+						</div>
+					</article>
+					<article class="review review-inactive-left">
+						<p class="review-content">placeholder review</p>
+						<div class="review-bottom">
+							<span class="review-stars">⭐⭐⭐⭐⭐</span>
+							<span class="review-name">A placeholder</span>
+						</div>
+					</article>
+
+					<article class="review review-active">
+						<p class="review-content">amogn us,,,</p>
+						<div class="review-bottom">
+							<span class="review-stars">⭐⭐⭐⭐⭐</span>
+							<span class="review-name">John Cena</span>
+						</div>
+					</article>
+
+					<article class="review review-inactive-right">
+						<p class="review-content">idk what this is i just like writing reviews</p>
+						<div class="review-bottom">
+							<span class="review-stars">⭐⭐⭐⭐⭐</span>
+							<span class="review-name">Joey E.</span>
+						</div>
+					</article>
+					<article class="review review-inactive-right">
+						<p class="review-content">The plushies are so soft (＃°Д°)</p>
+						<div class="review-bottom">
+							<span class="review-stars">⭐⭐⭐⭐⭐</span>
+							<span class="review-name">Soft plushie lover</span>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>Copyright "Imposter Inc."</p>
+			<a href="contact.html">Contact Us</a>
+		</footer>
+	</body>
+</html>
