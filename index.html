@@ -4,8 +4,9 @@
   --   aboutus.html and reviews.html
   --   All of the individual product tiles link to about:blank
   -- These files *would* exist, but currently I'm just designing index.html, contact.html and product.html
-  -- CSS is TBD, so these elements might move around a little if I did something wrong.
+  -- Bootstrap exists, but currently is only used for its "Reboot" module
   -- In what class do I learn backend stuff? All these exposed .html-s make me cringe >.<
+  -- There's no javascript yet, so the burger button doesn't work
   -->
 <html>
 	<head>
@@ -17,48 +18,50 @@
 	</head>
 	<body>
 		<header>
-			<h1 id="header-logo">Imposter Inc.</h1>
+			<h1 id="header-logo">
+				<a class="hide-link" href="index.html">Imposter Inc.</a>
+			</h1>
 			<nav>
 				<a href="aboutus.html">About Us</a>
 				<a href="product.html">Products</a>
 				<a href="contact.html">Contact Us</a>
 			</nav>
 
-			<div id="header-burger-button">
-				<img src="assets/burger.svg">
+			<div id="burger-button-container">
+				<img id="burger-button" src="assets/burger.svg">
 			</div>
 		</header>
 
 		<div id="hero-background">
 			<!-- The #hero-background will have CSS `background-image` for the hero image -->
-			<h1 id="hero-company-name">Imposter Inc.</h1>
-			<h2 id="hero-company-desc">The highest quality Among Us plushies on the market!</h2>
+			<h1 id="hero-company-name" class="hero-text">Imposter Inc.</h1>
+			<h2 id="hero-company-desc" class="hero-text">The highest quality Among Us plushies on the market!</h2>
 		</div>
 
 		<main>
 			<section class="page-tile tile-blue" id="tile-aboutus">
 				<h1 class="tile-heading">
-					<a href="aboutus.html">About Us</a>
+					<a class="tile-heading" href="aboutus.html">About Us</a>
 				</h1>
 				<div class="tile-content">
 					<p class="tile-description">Lorem ipsum</p>
-					<img src="assets/pink.jpg">
+					<img class="tile-img" src="assets/pink.jpg">
 				</div>
 			</section>
 
 			<section class="page-tile tile-red" id="tile-products">
 				<h1 class="tile-heading">
-					<a href="product.html">Products</a>
+					<a class="tile-heading" href="product.html">Products</a>
 				</h1>
 				<div class="tile-content">
 					<p class="tile-description">Lorem ipsum</p>
-					<img src="assets/blue.jpg">
+					<img class="tile-img" src="assets/blue.jpg">
 				</div>
 			</section>
 
 			<section class="page-tile tile-green" id="tile-reviews">
 				<h1 class="tile-heading">
-					<a href="reviews.html">Reviews</a>
+					<a class="tile-heading" href="reviews.html">Reviews</a>
 				</h1>
 				<div class="tile-review-content">
 					<article class="review review-inactive-left">

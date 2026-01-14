@@ -1,0 +1,124 @@
+/* Root variables */
+:root {
+	--triadic-blue: #9DD5F6;
+	--triadic-red: #F9A7C0;
+	--triadic-green: #C0F9A7;
+}
+
+/* Header bar  */
+header {
+	height: 75px;
+	padding: 0px 20px;
+	display: flex;
+	align-items: center;
+}
+nav {
+	flex: 1;
+	display: flex;
+	justify-content: space-evenly;
+}
+nav a {
+	font-size: 20px;
+}
+#burger-button {
+	width: 40px;
+	cursor: pointer;
+}
+.hide-link {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+/* Hero image */
+#hero-background {
+	padding-top: 20vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: calc(100vh - 75px);
+	background-image: url("assets/rainbow.jpg");
+	background-size: cover;
+}
+.hero-text {
+	margin-top: 20px;
+	padding: 2px 10px;
+	background-color: black;
+	color: white;
+}
+
+/* Card section */
+main {
+	margin-top: 10vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.page-tile {
+	width: 75%;
+	margin-bottom: 10vh;
+	padding: 20px;
+	border-radius: 25px;
+}
+.tile-blue {
+	background-color: var(--triadic-blue);
+}
+.tile-red {
+	background-color: var(--triadic-red);
+}
+.tile-green {
+	background-color: var(--triadic-green);
+}
+.tile-heading {
+	color: black;
+	font-weight: normal;
+}
+.tile-content {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+}
+.tile-img {
+	width: 100%;
+}
+.review {
+	width: 50%;
+	padding: 20px;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	background-color: white;
+	border-radius: 25px;
+}
+.review-bottom {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: flex-end;
+}
+.review-name {
+	text-align: right;
+}
+
+/* TEMPORARY STYLING BECAUSE I CAN'T FIGURE OUT HOW TO DO
+ * THE REVIEW CARDS LIKE I WANTED IN THE DRAFT
+ */
+.tile-review-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.review {
+	margin-top: 15px;
+}
+
+/* Footer */
+footer {
+	padding: 0px 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: flex-end;
+	height: 100px;
+	background-color: var(--triadic-blue);
+	font-size: 18px;
+}
+footer * {
+	margin: 0px;
+	margin-bottom: 10px;
+}
