@@ -21,14 +21,15 @@
 			<h1 id="header-logo">
 				<a class="hide-link" href="index.html">Imposter Inc.</a>
 			</h1>
-			<nav>
+			<!-- 'nav-hidden' hides the navbar on mobile -->
+			<nav nav-hidden="true">
 				<a href="aboutus.html">About Us</a>
 				<a href="product.html">Products</a>
 				<a href="contact.html">Contact Us</a>
 			</nav>
 
 			<div id="burger-button-container">
-				<img id="burger-button" src="assets/burger.svg">
+				<img id="burger-button" src="assets/burger.svg" onclick="let nav=document.querySelector('nav');nav.setAttribute('nav-hidden',!JSON.parse(nav.getAttribute('nav-hidden')));">
 			</div>
 		</header>
 
@@ -107,7 +108,7 @@
 
 		<footer>
 			<p>Copyright "Imposter Inc."</p>
-			<a href="contact.html">Contact Us</a>
+			<a class="text-center" href="contact.html">Contact Us</a>
 		</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
