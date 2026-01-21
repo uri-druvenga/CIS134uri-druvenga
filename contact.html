@@ -1,55 +1,95 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Imposter Inc.</title>
+		<title>Contact - Imposter Inc.</title>
 		<meta charset="UTF-8">
-		<!-- Placeholder for CSS <link> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 		<header>
-			<h1 id="header-logo">Imposter Inc.</h1>
-			<nav>
+			<h1 id="header-logo">
+				<a class="hide-link" href="index.html">Imposter Inc.</a>
+			</h1>
+			<!-- 'nav-hidden' hides the navbar on mobile -->
+			<nav nav-hidden="true">
 				<a href="aboutus.html">About Us</a>
 				<a href="product.html">Products</a>
 				<a href="contact.html">Contact Us</a>
 			</nav>
 
-			<div id="header-burger-button">
-				<img src="assets/burger.svg">
+			<div id="burger-button-container">
+				<img id="burger-button" src="assets/burger.svg" onclick="let nav=document.querySelector('nav');nav.setAttribute('nav-hidden',!JSON.parse(nav.getAttribute('nav-hidden')));">
 			</div>
 		</header>
 
 		<div id="hero-background">
-			<h1 id="hero-company-name">Imposter Inc.</h1>
-			<h2 id="hero-company-desc">The highest quality Among Us plushies on the market!</h2>
+			<h1 id="hero-company-name" class="hero-text">Imposter Inc.</h1>
+			<h2 id="hero-company-desc" class="hero-text">The highest quality Among Us plushies on the market!</h2>
 		</div>
 
 		<main>
-			<form id="contact-form">
-				<label for="form-name">Your Name</label>
-				<input type="text" id="form-name" name="form-name">
+			<form id="contact-form" onsubmit="sendContactEmail(event)" class="page-tile tile-blue">
+				<h2 id="form-heading">Send a Message</h2>
 
-				<label for="form-email">Your Email</label>
-				<input type="email" id="form-email" name="form-email">
+				<div class="form-row">
+					<label for="form-name">Your Name</label>
+					<input type="text" class="form-input" id="form-name" name="form-name">
+				</div>
+	
+				<div class="form-row">
+					<label for="form-email">Your Email</label>
+					<input type="email" class="form-input" id="form-email" name="form-email">
+				</div>
 
-				<label for="form-subject">Reason for Contact</label>
-				<input type="text" id="form-subject" name="form-subject">
+				<div class="form-row">
+					<label for="form-subject">Reason for Contact</label>
+					<input type="text" class="form-input" id="form-subject" name="form-subject">
+				</div>
 
-				<label for="form-body">Your message</label>
-				<textarea id="form-body" name="form-body" rows="8"></textarea>
+				<div class="form-row">
+					<label for="form-body">Your message</label>
+					<textarea id="form-body" class="form-input" name="form-body" rows="8"></textarea>
+				</div>
+
+				<div class="form-row-center">
+					<input type="submit" id="form-submit" value="Send Message">
+				</div>
 			</form>
 
-			<section class="page-tile tile-red">
+			<section id="socials-tile" class="page-tile tile-red">
 				<h1 id="socials-heading">Our Socials</h1>
-				<a href="about:blank" class="twitter-link">Twitter</a>
-				<a href="about:blank" class="facebook-link">Facebook</a>
-				<a href="about:blank" class="tiktok-link">TikTok</a>
+				<a href="about:blank" class="social-link twitter-link">Twitter</a>
+				<a href="about:blank" class="social-link facebook-link">Facebook</a>
+				<a href="about:blank" class="social-link tiktok-link">TikTok</a>
 			</section>
 		</main>
 
 		<footer>
 			<p>Copyright "Imposter Inc."</p>
-			<a href="contact.html">Contact Us</a>
+			<a class="text-center" href="contact.html">Contact Us</a>
 		</footer>
+
+		<script>
+			// Send an email with the contact form
+			function sendContactEmail(event) {
+				// Don't redirect
+				event.preventDefault();
+
+				// THIS IS WHERE AN EMAIL WOULD BE SENT
+				// I'M NOT GOING TO CODE THE SERVER STUFF FOR THIS
+				// PLUS I'M NOT DOXXING MY OWN EMAIL
+				//  ¯\_(ツ)_/¯
+
+				// Show a "you sent an email" popup
+
+				// Clear HTML inputs
+				[...event.srcElement.querySelectorAll(".form-row")].forEach(function(row) {
+					let input = row.querySelector("input, textarea");
+					input.value = "";
+				});
+			}
+		</script>
 	</body>
 </html>
