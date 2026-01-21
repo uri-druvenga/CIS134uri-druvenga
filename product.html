@@ -1,67 +1,72 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Imposter Inc.</title>
+		<title>Products - Imposter Inc.</title>
 		<meta charset="UTF-8">
-		<!-- Placeholder for CSS <link> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 		<header>
-			<h1 id="header-logo">Imposter Inc.</h1>
-			<nav>
+			<h1 id="header-logo">
+				<a class="hide-link" href="index.html">Imposter Inc.</a>
+			</h1>
+			<!-- 'nav-hidden' hides the navbar on mobile -->
+			<nav nav-hidden="true">
 				<a href="aboutus.html">About Us</a>
 				<a href="product.html">Products</a>
 				<a href="contact.html">Contact Us</a>
 			</nav>
 
-			<div id="header-burger-button">
-				<img src="assets/burger.svg">
+			<div id="burger-button-container">
+				<img id="burger-button" src="assets/burger.svg" onclick="let nav=document.querySelector('nav');nav.setAttribute('nav-hidden',!JSON.parse(nav.getAttribute('nav-hidden')));">
 			</div>
 		</header>
 
 		<div id="hero-background">
-			<h1 id="hero-company-name">Imposter Inc.</h1>
-			<h2 id="hero-company-desc">The highest quality Among Us plushies on the market!</h2>
+			<h1 id="hero-company-name" class="hero-text">Imposter Inc.</h1>
+			<h2 id="hero-company-desc" class="hero-text">The highest quality Among Us plushies on the market!</h2>
 		</div>
 
 		<main>
 			<section class="page-tile tile-blue" id="tile-product-pink_crewmate">
 				<h1 class="tile-heading">
-					<a href="about:blank#product/pink_crewmate">Pink Crewmate</a>
+					<a href="#product/pink_crewmate">Pink Crewmate</a>
 				</h1>
 				<div class="tile-content">
 					<p class="tile-description">A beautiful pink crewmate from Innersloth's hit video game "Among Us". This pink crewmate comes with a flower on its head for minimum suspiciousness.</p>
-					<img src="assets/pink.jpg">
+					<img class="tile-img" src="assets/pink.jpg">
 				</div>
-				<a href="about:blank#product/pink_crewmate" class="tile-product-buynow">Buy Now</a>
+				<a href="#product/pink_crewmate" class="tile-product-buynow">Buy Now</a>
 			</section>
 
 			<section class="page-tile tile-red" id="tile-product-blue_amogus">
 				<h1 class="tile-heading">
-					<a href="about:blank#product/blue_amogus">Blue Amogus</a>
+					<a href="#product/blue_amogus">Blue Amogus</a>
 				</h1>
 				<div class="tile-content">
 					<p class="tile-description">This Amogus is 100% crewmate. It definetely isn't hiding a knife behind its back... Please buy this thing please PLEASE OH NO fvuygjninbguytfuygbhi</p>
-					<img src="assets/blue.jpg">
+					<img class="tile-img" src="assets/blue.jpg">
 				</div>
-				<a href="about:blank#product/blue_amogus" class="tile-product-buynow">Buy Now</a>
+				<a href="#product/blue_amogus" class="tile-product-buynow">Buy Now</a>
 			</section>
 
 			<section class="page-tile tile-green" id="tile-product-orange_imposter">
 				<h1 class="tile-heading">
-					<a href="about:blank#product/orange_imposter">Orange Imposter</a>
+					<a href="#product/orange_imposter">Orange Imposter</a>
 				</h1>
 				<div class="tile-content">
 					<p class="tile-description">A very sussy boi</p>
-					<img src="assets/orange.jpg">
+					<img class="tile-img" src="assets/orange.jpg">
 				</div>
-				<a href="about:blank#product/orange_imposter" class="tile-product-buynow">Buy Now</a>
+				<a href="#product/orange_imposter" class="tile-product-buynow">Buy Now</a>
 			</section>
 		</main>
 
 		<footer>
 			<p>Copyright "Imposter Inc."</p>
-			<a href="contact.html">Contact Us</a>
+			<a class="text-center" href="contact.html">Contact Us</a>
 		</footer>
 	</body>
 </html>
