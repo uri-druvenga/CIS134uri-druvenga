@@ -1,8 +1,33 @@
+/* Import fonts */
+@font-face {
+	font-family: "Open Sans";
+	src: url("assets/font/Open_Sans/static/OpenSans-Regular.ttf");
+	font-weight: normal;
+	fot-style: normal;
+}
+@font-face {
+	font-family: "Open Sans";
+	src: url("assets/font/Open_Sans/static/OpenSans-SemiBold.ttf");
+	font-weight: 500;
+	fot-style: normal;
+}
+@font-face {
+	font-family: Merriweather;
+	src: url("assets/font/Merriweather/static/Merriweather_24pt-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* Root variables */
 :root {
 	--triadic-blue: #9DD5F6;
 	--triadic-red: #F9A7C0;
 	--triadic-green: #C0F9A7;
+}
+
+body {
+	color: black;
+	font-family: "Open Sans";
 }
 
 /* Header bar  */
@@ -53,6 +78,10 @@ nav a {
 	padding: 2px 10px;
 	background-color: black;
 	color: white;
+}
+#hero-company-desc {
+	font-family: Merriweather;
+	font-size: 26px;
 }
 
 /* Card section */
