@@ -204,14 +204,15 @@ footer * {
 	margin-right: 0.5em;
 	vertical-align: middle;
 }
-.twitter-link::before {
-	background-image: url("https://twitter.com/favicon.ico");
+.form-table {
+	table-layout: fixed;
 }
-.facebook-link::before {
-	background-image: url("https://facebook.com/favicon.ico");
+.form-table td {
+	/* idk why this works, but stack overflow said it does (and it does) - how weird */
+	width: 2%;
 }
-.tiktok-link::before {
-	background-image: url("https://tiktok.com/favicon.ico");
+.favi-icon {
+	text-align: right;
 }
 
 /* Responsive stuff */
